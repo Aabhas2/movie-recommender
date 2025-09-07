@@ -4,8 +4,7 @@ import pandas as pd
 import requests
 
 def fetch_poster(movie_id): 
-    api_key = "a650f037dfb773f56ee1a5ad1d380a66"
-    movie_id = 550  # Fight Club
+    api_key = st.secrets['TMDB_API_KEY']
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
     try: 
         response = requests.get(url)
